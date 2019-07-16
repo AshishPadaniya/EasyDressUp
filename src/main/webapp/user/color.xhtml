@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"          
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <h:outputStylesheet name="easydressup.css"  library="css"/>
+        <h:outputStylesheet name="footer.css"  library="css"/>
+        <h:outputStylesheet name="jsfcrud.css"  library="css"/>
+        <style type="text/css">
+            .red{
+                color:red;
+                font-weight:bold;
+                cursor: pointer
+            }
+             .blue{
+                font-weight:bold;
+                color:blue;
+                cursor: pointer
+            }
+            .orange{
+                font-weight:bold;
+                color:orange;
+                cursor: pointer
+            }
+             .pink{
+                font-weight:bold;
+                color:pink;
+                cursor: pointer
+            }
+             .green{
+                font-weight:bold;
+                color:green;
+                cursor: pointer
+            }
+             .white{
+                font-weight:bold;
+                color:white;
+                cursor: pointer
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <ui:include src="header.xhtml" />
+        <h:form>
+            <h:panelGrid columns="2">
+            <h:outputLabel value="#{messages.language_label}" styleClass="#{colorConvertorBean.selectedColor}"></h:outputLabel>
+            <h:selectOneMenu value="#{colorConvertorBean.selectedColor}" onchange="submit()"
+                             valueChangeListener="#{language.countryLocaleCodeChanged}">
+                <f:selectItems value="#{colorConvertorBean.colors}" /> 
+            </h:selectOneMenu>
+        </h:panelGrid>
+            
+        </h:form>
+                <h:outputLabel styleClass="#{colorConvertorBean.selectedColor}"> Welcome to EasyDressup </h:outputLabel>
+        <h:outputLabel styleClass="#{colorConvertorBean.selectedColor}"> Lorem ipsum dolor sit amet, sit imperdiet mauris urna, sit faucibus sed tempus est suspendisse nibh, lacinia tempor nonummy. Justo ac, diam sem venenatis lorem amet quisque etiam, vitae ac luctus vel. Neque nonummy in cum fusce. Odio in fringilla ipsum, nibh et elit libero. Dui felis, nunc iaculis eget massa, velit iaculis, proin rutrum sit aenean diam proin fringilla, erat debitis eu. Quisque nec tempus, hendrerit delectus, eiusmod risus taciti.
+
+Pellentesque consectetuer, mauris posuere porta litora, dui sodales ut lectus. Nec at enim malesuada sed, ut ac gravida turpis nulla velit fusce. Nunc leo phasellus tellus malesuada venenatis a, mollis fusce est feugiat, in fusce facilisis mauris nulla dui, orci tellus tortor vestibulum libero mauris est, hymenaeos turpis leo feugiat augue et. Ultricies pulvinar vitae morbi lorem wisi, felis ante in eget imperdiet dictum. In nunc erat est commodo scelerisque nulla, posuere egestas, aliquam mollis. Magna vitae, suscipit purus lorem est, gravida mollis rutrum in, ut tellus aenean dolor, in in ullamcorper ligula proin vivamus. Quisque enim integer.
+
+Arcu vel nunc ante lectus lacus, dolor consequat lacus, praesent luctus sit et, mauris et, sed maecenas montes suspendisse maecenas magna a. Sit lorem bibendum amet, hendrerit iaculis sit viverra nisl amet in. Suspendisse dictum wisi malesuada in metus, pretium lacinia maecenas, pellentesque bibendum cursus ut accumsan commodo, ac penatibus tortor eu vitae felis sed. Semper tempus, quis urna duis integer vivamus justo, pharetra eros tortor sollicitudin et et, adipiscing viverra wisi modi ornare, wisi eget nam. Ante fusce in felis. Sit malesuada vitae, nibh aliquam nonummy adipiscing, et aut et ac pellentesque, fermentum nonummy wisi ultrices amet, nisl in odio. Placerat nam nam elit neque fusce velit, augue nunc in interdum inceptos nec, hymenaeos vel interdum sollicitudin ut erat. Luctus pede purus enim felis nunc eget, lobortis ultricies, nunc amet nullam, diam maecenas integer mauris id mauris ipsum, vestibulum accumsan tortor habitant convallis ultrices. Consectetuer pellentesque posuere, iaculis vulputate pretium non, est imperdiet eget tellus blandit vivamus, proin non tempus, at morbi. Nam proin iaculis, quis dis in ullamcorper integer morbi, nulla non natoque, nascetur etiam sem donec et. At lacus pellentesque, maecenas sollicitudin tempor aliquam donec in morbi, montes neque. Blandit vestibulum.
+
+Praesent nec arcu fermentum ante pulvinar felis, id erat porttitor enim platea tincidunt, dapibus non lobortis in at a est, morbi aenean dignissim minus et odio hac, sed nec fermentum. Dui sit eros in ut eleifend, nullam pharetra amet lacus. Lacus consectetuer vel sed, nec erat ante magna a placerat non, eu ultricies porta vitae, elit lacus justo. Et a vehicula diam quasi risus vivamus, fringilla curabitur, urna eu vitae augue donec, ullamcorper vitae. A sed ultrices viverra libero quam donec, mauris phasellus et, vivamus duis. Non consequatur, leo nec. Enim leo, ut ac lectus, consequat ullamcorper nunc praesent. In varius mauris dolor duis fringilla vehicula. Arcu in ac mi, proin nisl, ante sed, tellus sit rutrum amet aliquet wisi mauris, non nunc wisi. </h:outputLabel>
+     
+        <footer class="footer">
+            <div class="container">
+                <span class="text-muted"><h:outputLabel styleClass="#{colorConvertorBean.selectedColor}"> &copy;Copyrights easydressup.com 2018-2019</h:outputLabel></span>
+            </div>
+        </footer>
+    </h:body>
+</html>

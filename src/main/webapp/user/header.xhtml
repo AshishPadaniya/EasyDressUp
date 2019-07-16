@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">easyDressUp</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><h:link outcome="categories"><h:outputLabel value="#{messages.category_link_label}"></h:outputLabel></h:link></li>
+                        <li><h:link outcome="outfits"><h:outputLabel value="#{messages.outfit_link_label}"></h:outputLabel></h:link></li>
+                        <li><h:link outcome="calander"><h:outputLabel value="#{messages.calender_link_label}"></h:outputLabel></h:link></li>
+                        <li><h:link outcome="language"><h:outputLabel value="#{messages.language_link_label}"></h:outputLabel></h:link>  
+                            <li ><h:link outcome="color"><h:outputLabel value="#{messages.color_link_label}"></h:outputLabel></h:link>  </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-nav" style="position: absolute;right: 42px;top: 9%;">
+                    <span style="color: white;position: absolute;right: 124%;top: 28%">
+                        <h:form>
+                            <h:commandLink style="color:white;cursor: pointer;" action="#{usersController.prepareProfile()}">
+                                <h:outputText value="#{loginController.user.firstName}">
+                                </h:outputText><span style="margin-right: 10px"/>
+                                <h:outputText value="#{loginController.user.lastName}"/>
+                            </h:commandLink></h:form></span>
+                    <h:form>
+                        <h:commandLink class="nav-item btn btn-primary" action="#{loginController.logout}" value="#{messages.logout_btn_label}"></h:commandLink>
+                    </h:form>
+                </div>
+            </nav>
+        </header>   
+    </h:body>
+</html>
+
